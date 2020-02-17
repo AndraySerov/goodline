@@ -7,6 +7,8 @@ def output(lvl, arg):
     print(f"Уровень {lvl}:")
     
     if isinstance(arg, list):
+        if not arg:                     #catch error for empty line
+            return
         if isinstance(arg[0], str):
             [print('\t', word) for word in arg]
         else:
